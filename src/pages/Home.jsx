@@ -29,7 +29,7 @@ const products = [
   },
   {
     id: 4,
-    img: "/image/lavanda.png",
+    img: "/image/jazmin.png",
     name: "Jazmín",
     aroma: "Floral",
     description: "Una fragancia elegante y delicada.",
@@ -161,7 +161,13 @@ function Home() {
           <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
 
             <div className="flex min-h-[400px] items-center justify-center rounded-[2rem] bg-[#d8c3aa]">
-              <span className="text-8xl">🕯️</span>
+              <div className="overflow-hidden rounded-[2rem]">
+                <img
+                  src="/image/nuestraEsencia.png"
+                  alt="Velas aromáticas artesanales"
+                  className="h-[520px] w-full object-cover"
+                />
+              </div>
             </div>
 
             <div>
