@@ -9,7 +9,7 @@ const products = [
     name: "Lavanda",
     aroma: "Floral",
     description: "Un aroma suave para momentos de relajación.",
-    price: 35000,
+    price: 10000,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const products = [
     name: "Vainilla",
     aroma: "Dulce",
     description: "Un aroma cálido y acogedor para tu hogar.",
-    price: 32000,
+    price: 12000,
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const products = [
     name: "Canela",
     aroma: "Especiado",
     description: "Una fragancia cálida perfecta para crear ambiente.",
-    price: 38000,
+    price: 15000,
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const products = [
     name: "Jazmín",
     aroma: "Floral",
     description: "Una fragancia elegante y delicada.",
-    price: 35000,
+    price: 11000,
   },
 ];
 
@@ -143,9 +143,13 @@ function Home() {
                 </h2>
               </div>
 
-              <button className="w-fit text-sm font-semibold text-[#5c4033] underline underline-offset-4">
-                Ver todos los productos
-              </button>
+              <a
+  href="/productos"
+  className="text-sm font-semibold text-[#5c4033] underline underline-offset-4 transition hover:text-[#b8955a]"
+>
+  Ver todos los productos
+</a>
+  
             </div>
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
