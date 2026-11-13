@@ -1,8 +1,10 @@
-import Navbar from "../componets/Navbar";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import ProductCard from "../componets/ProductCard";
-import Footer from "../componets/Footer"//../components/Footer";
+import ProductModal from "../componets/ProductModal";
+import products from "../data/products";
 
-const products = [
+/*const products = [
   {
     id: 1,
     img: "/image/lavanda.png",
@@ -35,12 +37,13 @@ const products = [
     description: "Una fragancia elegante y delicada.",
     price: 11000,
   },
-];
+];*/
 
 function Home() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   return (
     <div className="min-h-screen bg-[#f8f5f0]">
-      <Navbar />
 
       <main>
         {/* HERO */}
@@ -144,17 +147,21 @@ function Home() {
               </div>
 
               <a
-  href="/productos"
-  className="text-sm font-semibold text-[#5c4033] underline underline-offset-4 transition hover:text-[#b8955a]"
->
-  Ver todos los productos
-</a>
-  
+                href="/productos"
+                className="text-sm font-semibold text-[#5c4033] underline underline-offset-4 transition hover:text-[#b8955a]"
+              >
+                Ver todos los productos
+              </a>
+
             </div>
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {products.slice(0, 4).map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  onView={setSelectedProduct}
+                />
               ))}
             </div>
           </div>
@@ -248,7 +255,12 @@ function Home() {
         </section>
       </main>
 
-      <Footer />
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
+
+     
     </div>
   );
 }

@@ -1,4 +1,5 @@
-function ProductCard({ product }) {
+
+function ProductCard({ product, onView }) {
   return (
     <article className="group overflow-hidden rounded-2xl bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
 
@@ -26,7 +27,10 @@ function ProductCard({ product }) {
             ${product.price.toLocaleString("es-CO")}
           </span>
 
-          <button className="rounded-full bg-[#5c4033] px-4 py-2 text-sm text-white transition hover:bg-[#463026]">
+          <button
+            onClick={() => onView(product)}
+            className="rounded-full bg-[#5c4033] px-4 py-2 text-sm text-white transition hover:bg-[#463026]"
+          >
             Ver producto
           </button>
         </div>

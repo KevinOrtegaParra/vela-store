@@ -16,19 +16,19 @@ function Footer() {
                     <h3 className="font-semibold">Navegación</h3>
 
                     <div className="mt-4 flex flex-col gap-2 text-sm text-[#d8cabe]">
-                        <a href="#inicio" className="hover:text-white">
+                        <a href="/#inicio" className="hover:text-white">
                             Inicio
                         </a>
 
-                        <a href="#productos" className="hover:text-white">
+                        <a href="/#productos" className="hover:text-white">
                             Productos
                         </a>
 
-                        <a href="#nosotros" className="hover:text-white">
+                        <a href="/#nosotros" className="hover:text-white">
                             Nosotros
                         </a>
 
-                        <a href="#contacto" className="hover:text-white">
+                        <a href="/#contacto" className="hover:text-white">
                             Contacto
                         </a>
                     </div>

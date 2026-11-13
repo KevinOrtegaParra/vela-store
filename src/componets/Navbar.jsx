@@ -17,7 +17,7 @@ function Navbar() {
 
           {/* Logo */}
           <a
-            href="#inicio"
+            href="/#inicio"
             onClick={closeMenu}
             className="text-2xl font-bold tracking-wide text-[#5c4033]"
           >
@@ -28,28 +28,28 @@ function Navbar() {
           <div className="hidden items-center gap-8 md:flex">
 
             <a
-              href="#inicio"
+              href="/#inicio"
               className="text-sm text-[#3d332b] transition hover:text-[#b8955a]"
             >
               Inicio
             </a>
 
             <a
-              href="#categorias"
+              href="/#categorias"
               className="text-sm text-[#3d332b] transition hover:text-[#b8955a]"
             >
               Categorías
             </a>
 
             <a
-              href="#productos"
+              href="/#productos"
               className="text-sm text-[#3d332b] transition hover:text-[#b8955a]"
             >
               Productos
             </a>
 
             <a
-              href="#nosotros"
+              href="/#nosotros"
               className="text-sm text-[#3d332b] transition hover:text-[#b8955a]"
             >
               Nosotros
